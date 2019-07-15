@@ -29,11 +29,13 @@ QR-code Guest WiFi: (Implementation)
   Navigate to Interfacing options and enable "SPI" mode as well
 - Connect the LCD-screen with RPI
 - For setting up touch Screen run following commands on terminal:
+-------------------------------------------------------------------------------------------------
 	- sudo rm -rf LCD-show
 	- git clone https://github.com/goodtft/LCD-show.git
 	- chmod -R 755 LCD-show
 	- cd LCD-show/
 	- sudo ./LCD35-show
+-------------------------------------------------------------------------------------------------	
 - RPI is now reboot itself and then you can see the screen goes to desktop mode
 
 4. Libraries to be installed prior to run application (we utilize python3)
@@ -43,7 +45,8 @@ QR-code Guest WiFi: (Implementation)
   for pyaccesspoint library:
 	- sudo apt install python3-dev python3-pip && sudo pip3 install wireless netifaces psutil
 	- sudo apt update && sudo apt --yes --force-yes install dnsmasq hostapd python3-dev python3-pip && sudo pip3 install pyaccesspoint
-
+	- sudo pip3 install packaging
+	
   for pyqrcode library:
 	- pip3 install pyqrcode
 
