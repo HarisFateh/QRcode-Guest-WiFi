@@ -63,15 +63,16 @@ Recommended: run the following commands only once on the terminal for testing ac
   sudo pyaccesspoint stop
 
 for pyqrcode library:
-
 ```
 pip3 install pyqrcode
 ```
 for opencv library:
-
 ```
 pip3 install opencv-python
 pip3 install opencv-contrib-python
 ```
-
 for screen saver library:
+```
+sudo apt-get install feh
+sudo apt-get install xscreensaver
+```
