@@ -12,8 +12,8 @@ QR-code Guest WiFi: (Implementation)
   For remote desktop access enable "VNC" and install: "sudo apt-get install xrdp" in raspbian terminal 	
 - Now you are on the screen of the Raspbian either with Desktop or with terminal 
 - Connect with an Internet connection through WiFi or Ethernet Port
-[ref. fpor RPI-ssh making accessible](References/RPI-SSH.txt)
 
+[Reference for RPI-ssh making accessible](References/RPI-SSH.txt)
 
 #### 2. Preparation
 
