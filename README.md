@@ -50,7 +50,7 @@ sudo ./LCD35-show
 
 - Run following commands to install the desired libraries in your RPI;
 
-for pyaccesspoint library:
+- for pyaccesspoint library:
 ```	
 sudo apt install python3-dev python3-pip && sudo pip3 install wireless netifaces psutil
 sudo apt update && sudo apt --yes --force-yes install dnsmasq hostapd python3-dev python3-pip && sudo pip3 install pyaccesspoint
@@ -62,17 +62,32 @@ Recommended: run the following commands only once on the terminal for testing ac
 (now make sure the access point is appeared, check it by watching the WiFi Hotspot list on your phone with name of "MyAccesspoint")
   sudo pyaccesspoint stop
 
-for pyqrcode library:
+- for pyqrcode library:
 ```
 pip3 install pyqrcode
 ```
-for opencv library:
+- for opencv library:
 ```
 pip3 install opencv-python
 pip3 install opencv-contrib-python
 ```
-for screen saver library:
+- for screen saver library:
 ```
 sudo apt-get install feh
 sudo apt-get install xscreensaver
 ```
+
+#### 5. Making Screen saver work
+
+- you need to set the console blanking. The current setting, in seconds, can be displayed using
+```
+cat /sys/module/kernel/parameters/consoleblank
+```
+- Here, consoleblank is a kernel parameter. In order to be permanently set, it needs to be defined on the kernel command line.
+
+```
+sudo nano /boot/cmdline.txt
+```
+- Add consoleblank=0 to turn screen blanking off completely, or edit it to set the number of seconds of inactivity before the console will blank. Note the kernel command line must be a single line of text.
+
+#### 6. Last Step 
