@@ -1,0 +1,24 @@
+## Making RPI SSH accessible
+
+1. install raspbian by using etcher
+
+2. insert the card after plugging in it again
+
+3. then create a "ssh" file through opening cmd in that boot folder of rasp as:
+   G:\  echo > ssh
+
+4. now open the "cmdline.txt" and insert an ip address in the end of line or text as:
+   ip=192.168.100.3
+
+5. now open the internet networks (ethernet properties) and open ipv4 section and enter:
+   ip address = 192.168.100.2
+   subnetmask= 255.255.255.0 (auto)
+   gateway= 192.168.100.1
+
+6. open putty and enter ip = 192.168.100.3 and enter
+
+7. login as : pi
+
+8. password as : raspberry
+
+9. for remote desktop install: "sudo apt-get install xrdp" in rasp

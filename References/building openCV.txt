@@ -1,0 +1,79 @@
+## Step 1: Make Pi up-to-date
+
+ Update existing packages.
+- sudo apt-get update
+
+ Upgrade existing Pi software.
+- sudo apt-get upgrade
+
+ Update Raspberry Pi firmware.
+- sudo rpi-update
+
+## Step 2: Increase swap space
+
+We are going to increase swap size from 100MB to 1024MB, to facilitate compilation of OpenCV on all four cores of Pi.
+Open /etc/dphys-swapfile using nano editor.  Change the value CONF_SWAPSIZE  variable to 1024.
+Save the edited file and activate the new swap space using the following commands to restart the service
+
+- sudo /etc/init.d/dphys-swapfile stop
+- sudo /etc/init.d/dphys-swapfile start
+
+## Step 3: Install Dependencies
+
+- sudo apt-get install build-essential cmake pkg-config
+- sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+- sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+- sudo apt-get install libxvidcore-dev libx264-dev
+- sudo apt-get install libgtk2.0-dev libgtk-3-dev
+- sudo apt-get install libatlas-base-dev gfortran
+
+## Step 4: Setup Python 3 development tools
+
+- sudo apt-get install python3 python3-setuptools python3-dev
+
+## Step 5: Setup pip tool
+
+- wget https://bootstrap.pypa.io/get-pip.py
+- sudo python3 get-pip.py
+
+## Step 6: Grab OpenCV 3.4.1 and OpenCV-contrib archives
+
+- cd ~
+- wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.1.zip
+- wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.4.1.zip
+- unzip opencv.zip
+- unzip opencv_contrib.zip
+
+## Step 7: Install numpy
+
+- sudo pip3 install numpy
+
+## Step 8: Build OpenCV
+
+- cd ~/opencv-3.4.1/
+- mkdir build
+- cd build
+- cmake -D CMAKE_BUILD_TYPE=RELEASE \
+        -D CMAKE_INSTALL_PREFIX=/usr/local \
+        -D INSTALL_PYTHON_EXAMPLES=ON \
+        -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.4.1/modules \
+        -D ENABLE_PRECOMPILED_HEADERS=OFF \
+        -D BUILD_EXAMPLES=ON ..
+
+Step 9: Compile  and Install OpenCV
+
+We are going to compile OpenCV on all four cores. Issue the following command and compilation should succeed within 2 hours.
+
+- make -j4
+
+All that is left is, installing OpenCV using the following commands.
+
+- sudo make install
+- sudo ldconfig
+
+Step 10: Test OpenCV Installation
+
+Fire up the Python 3 interpreter on command line and run the following Python code.
+
+- import cv2
+- cv2.__version__

@@ -1,0 +1,17 @@
+### libraries/modules
+
+for pyaccesspoint library:
+
+1. sudo apt update && sudo apt --yes --force-yes install dnsmasq hostapd python3-dev unzip python3-pip && cd ~ && wget --output-document=pyaccesspoint-master.zip https://github.com/Goblenus/pyaccesspoint/archive/master.zip && unzip pyaccesspoint-master.zip && cd pyaccesspoint-master && sudo python3 setup.py install && cd ~ && sudo rm -rf pyaccesspoint-master.zip pyaccesspoint-master
+2. sudo apt-get install packaging
+
+for pyqrcode library:
+
+1. pip3 install pyqrcode
+
+others:
+
+1. pip3 install opencv-python
+2. pip3 install opencv-contrib-python
+3. sudo apt-get install feh
+4. sudo apt-get install xscreensaver

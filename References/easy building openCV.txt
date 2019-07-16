@@ -1,0 +1,22 @@
+# Easy install OpenCV for python on Mac, Ubuntu, and Raspberry Pi
+
+#### Get pip from bootstarp site: 
+- wget https://bootstrap.pypa.io/get-pip.py
+
+#### Now to install pip for Python 3 enter:
+- sudo python3 get-pip.py
+
+#### Next, and for the Raspberry Pi only, we need to install some additional packages:
+- sudo apt-get update
+
+#### Now install the prerequisites:
+- sudo apt-get install libhdf5-dev libhdf5-serial-dev
+- sudo apt-get install libqtwebkit4 libqt4-test
+- sudo apt-get install libatlas-base-dev libjasper-dev libqtgui4 python3-pyqt5
+
+#### Finally, we can enter a wonderfully simple command to install opencv:
+- sudo pip install opencv-contrib-python
+
+#### For those of you also used to installing OpenCV manually I am sure you will be as happy as I am!:
+- import cv2
+- cv2.__version__
