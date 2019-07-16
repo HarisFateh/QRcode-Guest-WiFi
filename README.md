@@ -56,11 +56,11 @@ sudo apt install python3-dev python3-pip && sudo pip3 install wireless netifaces
 sudo apt update && sudo apt --yes --force-yes install dnsmasq hostapd python3-dev python3-pip && sudo pip3 install pyaccesspoint
 sudo pip3 install packaging
 ```	
-*Recommended:* 
-*run the following commands only once on the terminal for testing access-point formation:*
-* sudo pyaccesspoint start*
-*now make sure the access point is appeared, check it by watching the WiFi Hotspot list on your phone with name of "MyAccesspoint"* 
-* sudo pyaccesspoint stop*
+Recommended: run the following commands only once on the terminal for testing access-point formation:
+ sudo pyaccesspoint start
+ 
+(now make sure the access point is appeared, check it by watching the WiFi Hotspot list on your phone with name of "MyAccesspoint")
+  sudo pyaccesspoint stop
 
 for pyqrcode library:
 
