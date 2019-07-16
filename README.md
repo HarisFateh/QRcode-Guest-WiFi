@@ -57,13 +57,13 @@ sudo apt update && sudo apt --yes --force-yes install dnsmasq hostapd python3-de
 sudo pip3 install packaging
 ```	
 for pyqrcode library:
----------------------------------
+*
 Recommended: 
 run the following commands only once on the terminal for testing access-point formation:
  sudo pyaccesspoint start
 now make sure the access point is appeared, check it by watching the WiFi Hotspot list on your phone with name of "MyAccesspoint" 
  sudo pyaccesspoint stop
----------------------------------
+*
 
 ```
 pip3 install pyqrcode
