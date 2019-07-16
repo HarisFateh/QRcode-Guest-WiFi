@@ -1,9 +1,9 @@
 # QRcode-Guest-WiFi
-Raspberry-Pi based QR-code Guest WiFi access point (AP)
+## Raspberry-Pi based QR-code Guest WiFi access point (AP)
 
 QR-code Guest WiFi: (Implementation)
 
-1. Get ready your Raspberry-Pi(RPI), (tested with Raspberry-Pi 3-B)
+#### 1. Get ready your Raspberry-Pi(RPI), (tested with Raspberry-Pi 3-B)
 
 - Download the latest version of Raspbian via link: https://www.raspberrypi.org/downloads/raspbian/
 - Install the downloaded version using "Etcher" or "Win32DiskImager" on the inserted SD-card. (note: make sure SD-card is properly formatted and size above 8 GB)
@@ -13,43 +13,57 @@ QR-code Guest WiFi: (Implementation)
 - Now you are on the screen of the Raspbian either with Desktop or with terminal 
 - Connect with an Internet connection through WiFi or Ethernet Port
 
-2. Preparation
+#### 2. Preparation
 
 - Open the terminal & run:
-	- sudo raspi-config
+```
+sudo raspi-config
+```
   Navigate to "Advanced Options" & select Expand Filesystem
-- Now once the RPI is ready with latest version of Raspbian (buster-image) run the following commands:
-	- sudo apt-get update
-	- sudo apt-get upgarde
 
-3. Setting up LCD-screen (RPI 3.5 inch TFT Touch Screen, SPI)
+- Now once the RPI is ready with latest version of Raspbian (buster-image) run the following commands:
+
+```
+sudo apt-get update
+sudo apt-get upgarde
+```
+
+#### 3. Setting up LCD-screen (RPI 3.5 inch TFT Touch Screen, SPI)
 
 - Open the terminal and type:
-	- sudo raspi-config
-  Navigate to Interfacing options and enable "SPI" mode as well
+```
+sudo raspi-config
+```
+Navigate to Interfacing options and enable "SPI" mode as well
 - Connect the LCD-screen with RPI
 - For setting up touch Screen run following commands on terminal:
--------------------------------------------------------------------------------------------------
-	- sudo rm -rf LCD-show
-	- git clone https://github.com/goodtft/LCD-show.git
-	- chmod -R 755 LCD-show
-	- cd LCD-show/
-	- sudo ./LCD35-show
--------------------------------------------------------------------------------------------------	
+```
+sudo rm -rf LCD-show
+git clone https://github.com/goodtft/LCD-show.git
+chmod -R 755 LCD-show
+cd LCD-show/
+sudo ./LCD35-show
+```
 - RPI is now reboot itself and then you can see the screen goes to desktop mode
 
-4. Libraries to be installed prior to run application (we utilize python3)
+#### 4. Libraries to be installed prior to run application (we utilize python3)
 
 - Run following commands to install the desired libraries in your RPI;
 
-  for pyaccesspoint library:
-	- sudo apt install python3-dev python3-pip && sudo pip3 install wireless netifaces psutil
-	- sudo apt update && sudo apt --yes --force-yes install dnsmasq hostapd python3-dev python3-pip && sudo pip3 install pyaccesspoint
-	- sudo pip3 install packaging
-	
-  for pyqrcode library:
-	- pip3 install pyqrcode
+for pyaccesspoint library:
+```	
+sudo apt install python3-dev python3-pip && sudo pip3 install wireless netifaces psutil
+sudo apt update && sudo apt --yes --force-yes install dnsmasq hostapd python3-dev python3-pip && sudo pip3 install pyaccesspoint
+sudo pip3 install packaging
+```	
+for pyqrcode library:
 
-  for opencv library:
-	- pip3 install opencv-python
-	- pip3 install opencv-contrib-python
+```
+pip3 install pyqrcode
+```
+for opencv library:
+
+```
+pip3 install opencv-python
+pip3 install opencv-contrib-python
+```
