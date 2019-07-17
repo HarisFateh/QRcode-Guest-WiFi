@@ -1,7 +1,9 @@
 # QRcode-Guest-WiFi
 ## Raspberry-Pi based QR-code Guest WiFi access point (AP)
 
-QR-code Guest WiFi: (Implementation)
+![Alt text] (/wlan-design.png)
+
+### QR-code Guest WiFi: (Implementation)
 
 #### 1. Get ready your Raspberry-Pi(RPI), (tested with Raspberry-Pi 3-B)
 
