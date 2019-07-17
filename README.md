@@ -67,6 +67,7 @@ Recommended: run the following commands only once on the terminal for testing ac
 - for pyqrcode library:
 ```
 pip3 install pyqrcode
+pip3 install pypng
 ```
 - for opencv library:
 ```
