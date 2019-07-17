@@ -15,6 +15,16 @@ QR-code Guest WiFi: (Implementation)
 
 [Reference for RPI-ssh making accessible](References/RPI-SSH.txt)
 
+[Reference for ethernet sharing](References/Ethernet bridge sharing.docx)
+
+[Reference for tft lcd screen 3.5 inch making work](References/RPI-TFT LCD Screen.txt)
+
+[Reference for building python opencv manually](References/building openCV.txt)
+
+[Reference for libraries](References/libraries required.txt)
+
+
+
 #### 2. Preparation
 
 - Open the terminal & run:
@@ -93,4 +103,13 @@ sudo nano /boot/cmdline.txt
 ```
 - Add consoleblank=0 to turn screen blanking off completely, or edit it to set the number of seconds of inactivity before the console will blank. Note the kernel command line must be a single line of text.
 
-#### 6. Last Step 
+#### 6. Last Step
+
+- Now simply run the following python file in the terminal:
+
+```
+sudo python3 guest-wlan.py
+```
+
+#### now you get the output as expected..!!
+Enjoy and Fork please..!!
