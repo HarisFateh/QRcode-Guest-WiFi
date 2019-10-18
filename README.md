@@ -16,16 +16,8 @@
 - Now you are on the screen of the Raspbian either with Desktop or with terminal 
 - Connect with an Internet connection through WiFi or Ethernet Port
 
-- [Reference for RPI-ssh making accessible](References/RPI-SSH.txt)
 
-- [Reference for ethernet sharing](References/Ethernet bridge sharing.docx)
-
-- [Reference for tft lcd screen 3.5 inch making work](References/RPI-TFT LCD Screen.txt)
-
-- [Reference for building python opencv manually](References/building openCV.txt)
-
-- [Reference for libraries](References/libraries required.txt)
-
+[References](References/)
 
 #### 2. Preparation
 
